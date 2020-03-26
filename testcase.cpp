@@ -39,3 +39,18 @@ void test(const char* testName, const char* real, const char* expected)
     log("%s", sstr.str().c_str());
 }
 
+void test(const char* testName, int real, int expected)
+{
+    std::stringstream sstr;
+    sstr << testName << " : ";
+    if (real == expected)
+    {
+        sstr << "PASSED";
+    }
+
+    else
+    {
+        sstr << "FAILED";
+    }
+    log("%s", sstr.str().c_str());
+}
