@@ -1,0 +1,4 @@
+#ifndef TESTQRUNNABLE_H
+#define TESTQRUNNABLE_H
+
+#endif // TESTQRUNNABLE_H

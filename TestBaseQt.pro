@@ -12,8 +12,12 @@ TEMPLATE = app
 SOURCES += main.cpp \
     testqdatastream.cpp \
     testcase.cpp \
-    testreflect.cpp
+    testreflect.cpp \
+    testqthread.cpp \
+    testqrunnable.cpp
 
 HEADERS += \
     testcase.h \
-    testreflect.h
+    testreflect.h \
+    testqthread.h \
+    testqrunnable.h

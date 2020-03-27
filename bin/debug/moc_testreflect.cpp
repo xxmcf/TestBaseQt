@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MyClass_t {
-    QByteArrayData data[14];
-    char stringdata0[99];
+    QByteArrayData data[19];
+    char stringdata0[134];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -42,12 +42,18 @@ QT_MOC_LITERAL(9, 65, 10), // "setMember3"
 QT_MOC_LITERAL(10, 76, 4), // "mem3"
 QT_MOC_LITERAL(11, 81, 4), // "func"
 QT_MOC_LITERAL(12, 86, 4), // "flag"
-QT_MOC_LITERAL(13, 91, 7) // "MEMBER3"
+QT_MOC_LITERAL(13, 91, 7), // "MEMBER3"
+QT_MOC_LITERAL(14, 99, 8), // "Priority"
+QT_MOC_LITERAL(15, 108, 4), // "High"
+QT_MOC_LITERAL(16, 113, 3), // "Low"
+QT_MOC_LITERAL(17, 117, 8), // "VeryHigh"
+QT_MOC_LITERAL(18, 126, 7) // "VeryLow"
 
     },
     "MyClass\0Member1\0\0Member2\0Member3\0"
     "setMember1\0mem1\0setMember2\0mem2\0"
-    "setMember3\0mem3\0func\0flag\0MEMBER3"
+    "setMember3\0mem3\0func\0flag\0MEMBER3\0"
+    "Priority\0High\0Low\0VeryHigh\0VeryLow"
 };
 #undef QT_MOC_LITERAL
 
@@ -59,7 +65,7 @@ static const uint qt_meta_data_MyClass[] = {
        0,    0, // classinfo
        7,   14, // methods
        3,   64, // properties
-       0,    0, // enums/sets
+       1,   73, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
@@ -86,6 +92,15 @@ static const uint qt_meta_data_MyClass[] = {
        1, QMetaType::Int, 0x00095103,
        3, QMetaType::Int, 0x00095103,
       13, QMetaType::QString, 0x00095003,
+
+ // enums: name, flags, count, data
+      14, 0x0,    4,   77,
+
+ // enum data: key, value
+      15, uint(MyClass::High),
+      16, uint(MyClass::Low),
+      17, uint(MyClass::VeryHigh),
+      18, uint(MyClass::VeryLow),
 
        0        // eod
 };

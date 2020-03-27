@@ -11,6 +11,9 @@ Q_PROPERTY(int Member2 READ Member2 WRITE setMember2 )
 Q_PROPERTY(QString MEMBER3 READ Member3 WRITE setMember3 )
 public:
     explicit MyClass(QObject *parent = 0){}
+
+    enum Priority { High, Low, VeryHigh, VeryLow };
+    Q_ENUM(Priority)
 signals:
 public slots:
 public:

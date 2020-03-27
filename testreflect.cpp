@@ -121,6 +121,42 @@ static void test4()
     test(__FUNCTION__, ret, addV);
 }
 
+//遍历该类的枚举集合
+static void test5()
+{
+    MyClass newObj;
+    const QMetaObject* metaObj = newObj.metaObject();
+
+    int enumCount = metaObj->enumeratorCount();
+
+    for (int i=0; i<enumCount; i++)
+    {
+        QMetaEnum enumerator = metaObj->enumerator(i);
+        int itemCount = enumerator.keyCount();
+        for (int j = 0; j<itemCount; j++)
+        {
+            //log() << enumerator.key(j) << "=>" << enumerator.value(j);
+            //High, Low, VeryHigh, VeryLow
+            if (!strcmp(enumerator.key(j), "High"))
+            {
+                test(__FUNCTION__, 0, enumerator.value(j));
+            }
+            else if (!strcmp(enumerator.key(j), "Low"))
+            {
+                test(__FUNCTION__, 1, enumerator.value(j));
+            }
+            else if (!strcmp(enumerator.key(j), "VeryHigh"))
+            {
+                test(__FUNCTION__, 2, enumerator.value(j));
+            }
+            else if (!strcmp(enumerator.key(j), "VeryLow"))
+            {
+                test(__FUNCTION__, 3, enumerator.value(j));
+            }
+        }
+    }
+}
+
 void TestReflect()
 {
     TEST_CASE_BEGIN;
@@ -129,5 +165,6 @@ void TestReflect()
     test2();
     test3();
     test4();
+    test5();
 
 }
